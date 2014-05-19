@@ -9,17 +9,20 @@ end
 
 function player1.update(dt)
 	--Collisions
-	if environmentalCollision_Ground(player1) == nil then
-		player1.inAir = true
-	end
 	if environmentalCollision_Ground(player1) or environmentalCollision_centralPillar(player1)== "bottom" then
 		player1.inAir = false
 	end
-	
-	if environmentalCollision_Ground(player1) == nil and environmentalCollision_centralPillar(player1) == nil then
-		player1.inAir = true
+	if environmentalCollision_platformOne(player1)== "bottom" then
+		player1.inAir = false
 	end
-	
+	if environmentalCollision_platformTwo(player1)== "bottom" then
+		player1.inAir = false
+	end
+	if environmentalCollision_Ground(player1) == nil and environmentalCollision_centralPillar(player1) == nil then
+		if environmentalCollision_platformOne(player1)== nil and environmentalCollision_platformTwo(player1)==nil then
+			player1.inAir = true
+		end
+	end
 	if environmentalCollision_centralPillar(player1) == "right" then
 		player1.x = player1.x - 101*dt
 	end
@@ -27,8 +30,12 @@ function player1.update(dt)
 	if environmentalCollision_centralPillar(player1) == "left" then
 		player1.x = player1.x +	101*dt
 	end
+	--if environmentalCollision_platformOne(player1)== "top" then
+		--player1.y = player1.y
+		--player1.inAir = true
+		--print("detected")
+	--end
 	
-	if environmentalCollision_centralPillar(player1) then print(environmentalCollision_centralPillar(player1)) end
 	
 	--Movement
 	--if player1.y < 600 - 40 then
@@ -52,9 +59,12 @@ function player1.update(dt)
 		player1.x = player1.x + 100*dt
 	end
 	if player1.jump > 0 then
+		if environmentalCollision_platformOne(player1)== "top" then
+			player1.jump=0
+		end
 		player1.jump = player1.jump-3*dt
 		player1.y = player1.y - ((player1.jump*16 + 32)*dt)*5
-		print("jumping")
+		--print("jumping")
 	end
 end
 

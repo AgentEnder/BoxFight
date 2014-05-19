@@ -7,27 +7,37 @@ function player2.load()
 end
 
 function player2.update(dt)
-		--Collisions
-	if environmentalCollision_Ground(player2) == nil then
-		player2.inAir = true
-	end
+	--Collisions
 	if environmentalCollision_Ground(player2) or environmentalCollision_centralPillar(player2)== "bottom" then
 		player2.inAir = false
 	end
-	
+	if environmentalCollision_platformOne(player2)== "bottom" then
+		player2.inAir = false
+	end
+	if environmentalCollision_platformTwo(player2)== "bottom" then
+		player2.inAir = false
+	end
 	if environmentalCollision_Ground(player2) == nil and environmentalCollision_centralPillar(player2) == nil then
-		player2.inAir = true
+		if environmentalCollision_platformOne(player2)== nil and environmentalCollision_platformTwo(player2)==nil then
+			player2.inAir = true
+		end
 	end
+	
+	
 	
 	if environmentalCollision_centralPillar(player2) == "right" then
-		player2.x = player2.x + 51*dt
+		player2.x = player2.x - 101*dt
 	end
 	
-	if environmentalCollision_centralPillar(player2) == "right" then
-		player2.x = player2.x - 51*dt
+	if environmentalCollision_centralPillar(player2) == "left" then
+		player2.x = player2.x +	101*dt
 	end
+	--if environmentalCollision_platformOne(player2)== "top" then
+		--player2.y = player2.y
+		--player2.inAir = true
+		--print("detected")
+	--end
 	
-	if environmentalCollision_centralPillar(player2) then print("colliding") end
 	
 	--Movement
 	--if player2.y < 600 - 40 then
@@ -40,20 +50,23 @@ function player2.update(dt)
 		if player2.gravityTimer < 10 then
 			player2.gravityTimer = 5*dt + player2.gravityTimer
 		end
-		player2.y = player2.y + (32*player2.gravityTimer*dt)*3
+		player2.y = player2.y + (32*player2.gravityTimer*dt)*5
 	else
 		player2.y = player2.y
 	end
 	if player2.direction == "left" then
-		player2.x = player2.x - 50*dt
+		player2.x = player2.x - 100*dt
 	end
 	if player2.direction == "right" then
-		player2.x = player2.x + 50*dt
+		player2.x = player2.x + 100*dt
 	end
 	if player2.jump > 0 then
+		if environmentalCollision_platformOne(player2)== "top" then
+			player2.jump=0
+		end
 		player2.jump = player2.jump-3*dt
-		player2.y = player2.y - ((player2.jump*16 + 32)*dt)*3
-		print("jumping")
+		player2.y = player2.y - ((player2.jump*16 + 32)*dt)*5
+		--print("jumping")
 	end
 end
 

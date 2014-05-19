@@ -53,6 +53,9 @@ function love.keyreleased(key, unicode)
 end
 
 function love.mousepressed(x, y, button)
+	if button == "l" then
+		print(player1.inAir)
+	end
 end
 
 function love.mousereleased(x, y, button)
@@ -66,6 +69,10 @@ end
 function Jump(player)
 	print (player.jump)
 	if player.inAir == false then
-		player.jump = 5
+		if	environmentalCollision_centralPillar(player) == "right" or environmentalCollision_centralPillar(player1) == "left" then
+			player.jump = 7.5
+		else
+			player.jump = 5
+		end
 	end
 end
