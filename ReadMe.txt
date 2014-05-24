@@ -2,7 +2,7 @@
 
 1)Alpha requirements:
 	tech: not sure hasnt failed on any windows device yet not tested on mac/linux
-	software: love2d game engine (download:"http://love2d.org")
+	software: love2d game engine (download:" http://love2d.org ")
 	etc: Patience and understanding
 2)Installation:
 	love2d: download from link above and follow instructions provided on web
