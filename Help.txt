@@ -3,11 +3,11 @@ Player 1 controls :wasd = movement
 		   e = ability 2
 		   z = attack 1
 		   ctrl = attack 2
-player 2 controls :wasd = movement
-		   q = ability 1
-		   e = ability 2
-		   z = attack 1
-		   ctrl = attack 2
+player 2 controls :Arrow Keys = movement
+		   k = ability 1
+		   l = ability 2
+		   . = attack 1
+		   , = attack 2
 
 Class Info:
 	Ninja:
