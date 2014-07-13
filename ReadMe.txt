@@ -25,6 +25,6 @@
 	programming:Craigory Coppola
 	various assistance: Jimmy Hardy and Vincent Etue
 	art: Craigory Coppola
-	sound: SE by Craigory Coppola, BGM Mahsio
+	sound: SE by Craigory Coppola, BGM audionautix.com
 	concepts: Craigory Coppola w/ assistance from Vincent Etue
 	bug testing: Craigory Coppola, Jimmy Hardy, StarfireTT, Mahsio,  and Vincent Etue
