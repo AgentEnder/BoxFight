@@ -1,14 +1,4 @@
-Player 1 controls :wasd = movement
-		   q = ability 1
-		   e = ability 2
-		   z = attack 1
-		   ctrl = attack 2
-player 2 controls :Arrow Keys = movement
-		   k = ability 1
-		   l = ability 2
-		   . = attack 1
-		   , = attack 2
-
+Controls are in game.
 Class Info:
 	Ninja:
 		grey w/ blue headband
@@ -31,3 +21,8 @@ playerSelection:
 		left click charachter sprite
 	player2:
 		right click charachter sprite
+singlePlayer:
+	Fight the AI earning a point for each kill, contest your high score
+	easy: always standard class
+	normal: random class
+	hard: always ninja
