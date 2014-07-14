@@ -16,11 +16,15 @@
 4)Controls
 	found in game under the help page
 5)Features
-	a) 2 player combat
+	a) Multiplayer
 	b)knockback + respawn
-	c)hud displaying player stats(WIP)
+	c)hud displaying player stats
 	d)multiple maps (WIP)
-	e)multiple classes (NYI)
+	e)multiple classes (WIP)
+	f)Single Player
+	g)sfx
+	h)AI practice mode
+	i)in game console accessed by `
 6)Credits
 	programming:Craigory Coppola
 	various assistance: Jimmy Hardy and Vincent Etue
