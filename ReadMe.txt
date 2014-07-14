@@ -6,7 +6,7 @@
 	etc: Patience and understanding
 2)Installation:
 	love2d: download from link above and follow instructions provided on web
-	Fight Night Duo:  no installation required (unzip file)
+	Box Fight:  no installation required (unzip file)
 3)Running The Alpha
 	a)once unzipped you will see the files "readme.txt"(this) and "check.love"(the game).
 	b)after installing love2d the .love extension should be associated with "love.exe"
