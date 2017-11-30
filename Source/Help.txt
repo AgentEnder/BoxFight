@@ -1,0 +1,33 @@
+Player 1 controls :wasd = movement
+		   q = ability 1
+		   e = ability 2
+		   z = attack 1
+		   ctrl = attack 2
+player 2 controls :wasd = movement
+		   q = ability 1
+		   e = ability 2
+		   z = attack 1
+		   ctrl = attack 2
+
+Class Info:
+	Ninja:
+		grey w/ blue headband
+		ability 1 = invisibilty
+			you temporarily turn invisible
+		ability 2 = Rush
+			temporarily double speed
+		attack 1 = 1 damage, light knockback
+		attack 2 = .5 damage, double knockback
+	standard:
+		White 
+		ability 1 = ultraRegen
+			3x regen speed
+		ability 2 = n/a
+			NYI
+		attack 1 = 1 damage, light knockback
+		attack 2 = .5 damage, double knockback
+playerSelection:
+	player1:
+		left click charachter sprite
+	player2:
+		right click charachter sprite
